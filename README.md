@@ -102,6 +102,6 @@ Enable autonomous driving by pressing A to go foward then D.
 
 ## Driving Videos
 
-[[![DeepPicar Driving]](https://www.youtube.com/embed/JaxtnlJYLhs?rel=0)
+[![DeepPicar Driving](https://img.youtube.com/vi/JaxtnlJYLhs/0.jpg)](https://www.youtube.com/watch?v=JaxtnlJYLhs)
 
 Some other examples of the DeepPicar driving can be found at: https://photos.app.goo.gl/q40QFieD5iI9yXU42
