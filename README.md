@@ -1,4 +1,4 @@
-# DeepPicar
+# DeepPicar - Proportional
 
 DeepPicar is a low-cost autonomous RC car platform using a deep
 convolutional neural network (CNN). DeepPicar is a small scale replication
@@ -86,6 +86,10 @@ Compress all the recorded files into a single zip file, say Dataset.zip for Cola
     updating: out-key.csv (deflated 81%)
     updating: out-video.avi (deflated 3%)
 
+Transfer Dataset.zip file to your computer by running these commands (change the commands respectively based on hostname and file location.
+
+    $ scp scp pi@pi-44.local:/home/pi/DeepPicar-v3/data/Dataset.zip C:/Users/me/Downloads
+
 ## Train the model
     
 Open the colab notebook. Following the notebook, you will upload the dataset to the colab, train the model, and download the model back to your PC. 
@@ -97,6 +101,8 @@ After you are done training, you need to copy the trained tflite model file (`la
 ## Autonomous control
 
 Copy the trained model to the DeepPicar. 
+
+    $ scp -r C:/Users/me/Downloads/large-200x66x3.tflite pi@pi-44.local:/home/pi/DeepPicar-v3/models
 
 Enable autonomous driving by pressing A to go foward then D.
 
