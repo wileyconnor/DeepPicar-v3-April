@@ -8,7 +8,7 @@ DAVE-2 and can drive itself in real-time locally on a Raspberry Pi.
 
 ## Build instructions video 
 
-https://www.youtube.com/watch?v=bbl7_tB5YOM
+[![DeepPicar Driving 2](https://img.youtube.com/vi/bbl7_tB5YOM/maxresdefault.jpg)](https://www.youtube.com/watch?v=bbl7_tB5YOM)
 
 ## Setup
 
