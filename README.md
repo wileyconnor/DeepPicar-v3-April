@@ -8,7 +8,7 @@ DAVE-2 and can drive itself in real-time locally on a Raspberry Pi.
 
 ## Build instructions video 
 
-https://www.youtube.com/watch?v=X1DDN9jcwjk
+https://www.youtube.com/watch?v=bbl7_tB5YOM
 
 ## Setup
 
@@ -46,14 +46,12 @@ Before running the driving script run this command:
 
     $ sudo systemctl start pigpiod
 
-If you want to start the daemon every time you lauch the Pi, run these commands:
-    
-    $ sudo systemctl enable pigpiod
-    $ sudo systemctl start pigpiod
+Ensure that you only start pigpiod once
+
 
 To start the backend server
 
-    $ sudo nice --20 python deeppicar.py -n 4 -f 30 -g
+    $ sudo nice --20 python deeppicar.py -n 4 -f 30 -g -t 75
 
 Gamepad controls:  
 Left stick: throttle  
@@ -80,7 +78,7 @@ Use the keys to manually control the car. Once you become confident in controlli
 
 The data collection can be enabled and stopped by pressing `R`. Once recording is enabled, the video feed and the corresponding control inputs are stored in `out-video.avi` and `out-key.csv` files, respectively. Later, we will use these files for training. It can be downloaded using scp commands.
 
-Each recording attempt with overwrite the previous
+Each recording attempt will overwrite the previous
 
 Compress all the recorded files into a single zip file, say Dataset.zip for Colab.
 
@@ -94,7 +92,7 @@ Open the colab notebook. Following the notebook, you will upload the dataset to 
 
 [Open In Colab](https://colab.research.google.com/drive/12IvrcxDrCyEZF8vLEgLj8qoY9x1fYv8y?usp=sharing)
 
-After you are done trainig, you need to copy the trained tflite model file (`large-200x66x3.tflite` by default) to the Pi using scp commands.
+After you are done training, you need to copy the trained tflite model file (`large-200x66x3.tflite` by default) to the Pi using scp commands.
 
 ## Autonomous control
 
@@ -104,6 +102,6 @@ Enable autonomous driving by pressing A to go foward then D.
 
 ## Driving Videos
 
-[![DeepPicar Driving](http://img.youtube.com/vi/SrS5iQV2Pfo/0.jpg)](http://www.youtube.com/watch?v=SrS5iQV2Pfo "DeepPicar_Video")
+[[![DeepPicar Driving]](https://www.youtube.com/embed/JaxtnlJYLhs?rel=0)
 
 Some other examples of the DeepPicar driving can be found at: https://photos.app.goo.gl/q40QFieD5iI9yXU42
